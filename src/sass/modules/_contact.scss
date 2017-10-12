@@ -3,3 +3,21 @@
   background-color: #244865;
   color: #F7F7F7;
 }
+
+.contact__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__icons > a {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  transition: all .1s ease-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
