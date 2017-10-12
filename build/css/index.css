@@ -26,6 +26,10 @@ nav a {
   nav a.active {
     background-color: #31638b; }
 
+.nav__home {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
 .hero {
   position: relative;
   top: 42px;
