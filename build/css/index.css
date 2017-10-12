@@ -128,6 +128,9 @@ nav a {
   font-weight: lighter;
   font-style: italic; }
 
+.project__feature-list {
+  padding-right: 24px; }
+
 .blog {
   background-color: #DDDDDD; }
 
