@@ -33,3 +33,25 @@
     window.addEventListener('scroll', applyActiveClass);
   });
 })();
+
+var postList = document.querySelector('#blog');
+
+fetch('/posts').then(function (resp) {
+  return resp.json();
+}).then(function (json) {
+  var posts = json.payload.references.Post;
+
+  Object.keys(posts).forEach(function (postId) {
+    var post = posts[postId];
+
+    var title = post.title;
+    var subtitle = post.content.subtitle;
+    var publishedAtDate = new Date(post.firstPublishedAt);
+
+    renderPost(title, subtitle, publishedAtDate);
+  });
+});
+
+function renderPost(title, subtitle, publishedAtDate) {
+  console.log('rendering post', title);
+}
