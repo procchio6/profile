@@ -26,7 +26,7 @@ gulp.task('scripts', () => {
         }))
           .on('error', console.log)
         .pipe(babel({
-            presets: ['env']
+            presets: ["es2015-script"]
         }))
         .pipe(gulp.dest("build/js"));
 });

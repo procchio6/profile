@@ -23,7 +23,7 @@ fetch('/posts')
 function renderPost(postId, title, subtitle, publishedAtDate) {
 
   let postHtml = `
-    <div class='post'>
+    <div class='post' data-postId="${postId}">
       <div class="post__header">
         <div class="post__title">
           ${title}
@@ -44,3 +44,11 @@ function renderPost(postId, title, subtitle, publishedAtDate) {
 
   postList.innerHTML += postHtml;
 }
+
+$(postList).on('click', 'div.post', function(e) {
+  // Return if more button was clicked
+  if ($(e.target).hasClass('post__more')) return;
+
+  const postId = this.dataset.postid;
+  window.open(`https://medium.com/posts/${postId}`, '_blank');
+});

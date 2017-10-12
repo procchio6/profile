@@ -1,5 +1,3 @@
-'use strict';
-
 (function () {
   var navLinks = document.querySelectorAll('nav a');
 
@@ -57,7 +55,15 @@ fetch('/posts').then(function (resp) {
 
 function renderPost(postId, title, subtitle, publishedAtDate) {
 
-  var postHtml = '\n    <div class=\'post\'>\n      <div class="post__header">\n        <div class="post__title">\n          ' + title + '\n        </div>\n        <div class="post__date">\n          ' + dateFormat(publishedAtDate, "mediumDate") + '\n        </div>\n      </div>\n      <div class="post__content">\n        <p class="post_body">\n          ' + subtitle + '\n          <a href="https://medium.com/posts/' + postId + '" class="post__more" target="_blank"> More</a>\n        </p>\n\n      </div>\n    </div>\n  ';
+  var postHtml = '\n    <div class=\'post\' data-postId="' + postId + '">\n      <div class="post__header">\n        <div class="post__title">\n          ' + title + '\n        </div>\n        <div class="post__date">\n          ' + dateFormat(publishedAtDate, "mediumDate") + '\n        </div>\n      </div>\n      <div class="post__content">\n        <p class="post_body">\n          ' + subtitle + '\n          <a href="https://medium.com/posts/' + postId + '" class="post__more" target="_blank"> More</a>\n        </p>\n\n      </div>\n    </div>\n  ';
 
   postList.innerHTML += postHtml;
 }
+
+$(postList).on('click', 'div.post', function (e) {
+  // Return if more button was clicked
+  if ($(e.target).hasClass('post__more')) return;
+
+  var postId = this.dataset.postid;
+  window.open('https://medium.com/posts/' + postId, '_blank');
+});
