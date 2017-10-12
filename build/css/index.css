@@ -20,7 +20,7 @@ nav li:hover {
 
 nav a {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px 12px;
   text-decoration: none;
   color: #F7F7F7; }
   nav a.active {
