@@ -184,20 +184,21 @@ nav a {
 
 .contact {
   padding: 30px;
-  background-color: #244865;
-  color: #F7F7F7; }
+  color: #F7F7F7;
+  background-color: #244865; }
 
 .contact__icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
 
 .contact__icons > a {
-  text-align: center;
-  margin-left: 10px;
   margin-right: 10px;
+  margin-left: 10px;
+  transition: all .1s ease-out;
+  text-align: center;
   text-decoration: none;
-  color: white;
-  transition: all .1s ease-out; }
+  color: white; }
   .contact__icons > a:hover {
     transform: translateY(-5px); }
 
