@@ -1,0 +1,12 @@
+.about {
+  background-color: #F7F7F7;
+}
+
+.about > p {
+  margin-bottom: 20px;
+  padding: 0% 15%;
+
+  @media all and (max-width: 768px) {
+    padding: 0px 30px;
+  }
+}

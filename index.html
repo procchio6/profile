@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pat Rocchio</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href='#home'>Home</a></li>
+        <li><a href='#about'>About</a></li>
+        <li><a href='#projects'>Projects</a></li>
+        <li><a href='#blog'>Blog</a></li>
+        <li><a href='#contact'>Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <img class="hero__image" src="/image/Love-Coding.jpg" alt="love coding">
+      <div class="hero__text">
+        Pat Rocchio
+      </div>
+      <div class="hero__profile-image"></div>
+    </section>
+
+    <section id="about" class="about">
+      <span class="title">About</span>
+      <p>
+        Hi! I'm Pat, a software developer with a passion for writing clean and high-performing code.
+        With experience in Ruby on Rails and JavaScript-based programming and a background
+        in lighting design and controls, I discovered programming through playing with the
+        Raspberry Pi. I bring strong skills in engineering, project management, and design
+        that help technology companies build awesome products.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <span class="title">Projects</span>
+      <div class="projects__list">
+        <div class="project">
+          <div class="project__header">
+            <span class="project__title">
+              Jumpstarter
+            </span>
+            <a href="https://github.com/procchio6/jumpstarter-client" title="Github" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://jumpstarter-client.herokuapp.com/" title="Demo" target="_blank">
+              <i class="fa fa-link" aria-hidden="true"></i>
+            </a>
+            <div class="project__sub-title">
+              Crowdfunding site for creators and makers.
+            </div>
+          </div>
+          <ul class="project__feature-list">
+            <li class="project__feature-list-item">
+              Built a RESTful API on Ruby on Rails to serve JSON and store data in Postgres DB
+            </li>
+            <li class="project__feature-list-item">
+              Used React and Redux to build frontend client
+            </li>
+            <li class="project__feature-list-item">
+              Configured Carrierwave gem for image uploading to Amazon S3
+            </li>
+            <li class="project__feature-list-item">
+              Utilized Semantic UI and custom CSS for styling
+            </li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project__header">
+            <span class="project__title">
+              Mill Game
+            </span>
+            <a href="https://github.com/qtotuan/mill-boardgame" title="Github" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://mill-game.herokuapp.com/" title="Demo" target="_blank">
+              <i class="fa fa-link" aria-hidden="true"></i>
+            </a>
+            <div class="project__sub-title">
+              Classic German board game built for the web.
+            </div>
+          </div>
+          <ul class="project__feature-list">
+            <li class="project__feature-list-item">
+              Built game animations and board layout with Bootstrap and custom CSS
+            </li>
+            <li class="project__feature-list-item">
+              Utilized Javascript and JQuery for game logic
+            </li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project__header">
+            <span class="project__title">
+              Flatiron DJ
+            </span>
+            <a href="https://github.com/cdaz5/flatiron-disk-jockey-front-end" title="Github" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://flatiron-disk-jockey.herokuapp.com/" title="Demo" target="_blank">
+              <i class="fa fa-link" aria-hidden="true"></i>
+            </a>
+            <div class="project__sub-title">
+              Get the party started by mixing music videos.
+            </div>
+          </div>
+          <ul class="project__feature-list">
+            <li class="project__feature-list-item">
+              Connected to YouTube API to query videos
+            </li>
+            <li class="project__feature-list-item">
+              Built customized video players in React to mix video sound
+            </li>
+            <li class="project__feature-list-item">
+              Used Ruby on Rails to persist mashups to Postgres database
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog" style="height: 500px;">
+      <span class="title">Blog</span>
+    </section>
+
+    <section id="contact" class="contact" style="height: 500px; background-color:red;">
+      <span class="title">Contact</span>
+    </section>
+  </body>
+
+  <script src="/js/index.js"> </script>
+
+</html>
