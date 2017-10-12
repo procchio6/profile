@@ -80,9 +80,6 @@ nav a {
     .about > p {
       padding: 0px 30px; } }
 
-.contact {
-  padding: 30px; }
-
 .projects {
   background-color: #141412; }
 
@@ -137,6 +134,42 @@ nav a {
   margin-top: 4px;
   font-weight: lighter;
   font-style: italic; }
+
+.blog {
+  background-color: #F7F7F7; }
+
+.blog > .title {
+  margin-bottom: 0px; }
+
+.posts-list {
+  padding: 30px 0px;
+  width: 70%;
+  margin: auto; }
+
+.post {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #244865;
+  border-radius: 4px;
+  transition: all .2s ease; }
+  .post:hover {
+    background-color: white; }
+  .post:last-child {
+    margin-bottom: 0px; }
+
+.post__content > p:last-child {
+  margin-bottom: 0px; }
+
+.post__title {
+  font-size: 24px;
+  font-weight: bold; }
+
+.post__date {
+  font-weight: lighter;
+  font-style: italic; }
+
+.contact {
+  padding: 30px; }
 
 html {
   width: 100%;

@@ -1,0 +1,43 @@
+.blog {
+  background-color: #F7F7F7;
+}
+
+.blog > .title {
+  margin-bottom: 0px;
+}
+
+.posts-list {
+  padding: 30px 0px;
+  width: 70%;
+  margin: auto;
+}
+
+.post {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #244865;
+  border-radius: 4px;
+  transition: all .2s ease;
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.post__content > p:last-child {
+  margin-bottom: 0px;
+}
+
+.post__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post__date {
+  font-weight: lighter;
+  font-style: italic;
+}

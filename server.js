@@ -7,6 +7,7 @@ app.set('port', (process.env.PORT || 3000));
 
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/build'));
+app.use('/scripts', express.static(__dirname + '/node_modules'));
 
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/index.html');
@@ -30,7 +31,7 @@ app.get('/posts', function(req, res) {
     });
 
   });
-  
+
 });
 
 app.listen(app.get('port'), function() {

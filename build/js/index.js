@@ -34,12 +34,15 @@
   });
 })();
 
-var postList = document.querySelector('#blog');
+var postList = document.querySelector('.posts-list');
+var postLoader = document.querySelector('.posts-loading');
 
 fetch('/posts').then(function (resp) {
   return resp.json();
 }).then(function (json) {
   var posts = json.payload.references.Post;
+
+  postLoader.style.display = 'none';
 
   Object.keys(posts).forEach(function (postId) {
     var post = posts[postId];
@@ -48,10 +51,13 @@ fetch('/posts').then(function (resp) {
     var subtitle = post.content.subtitle;
     var publishedAtDate = new Date(post.firstPublishedAt);
 
-    renderPost(title, subtitle, publishedAtDate);
+    renderPost(postId, title, subtitle, publishedAtDate);
   });
 });
 
-function renderPost(title, subtitle, publishedAtDate) {
-  console.log('rendering post', title);
+function renderPost(postId, title, subtitle, publishedAtDate) {
+
+  var postHtml = '\n    <div class=\'post\'>\n      <div class="post__header">\n        <div class="post__title">\n          ' + title + '\n        </div>\n        <div class="post__date">\n          ' + dateFormat(publishedAtDate, "mediumDate") + '\n        </div>\n      </div>\n      <div class="post__content">\n        <p class="post_body">\n          ' + subtitle + '\n          <a href="https://medium.com/posts/' + postId + '" class="post__more" target="_blank"> More</a>\n        </p>\n\n      </div>\n    </div>\n  ';
+
+  postList.innerHTML += postHtml;
 }

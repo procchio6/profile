@@ -18,7 +18,11 @@ gulp.task('sass:watch', function () {
 gulp.task('scripts', () => {
     gulp.src('./src/js/index.js')
         .pipe(include({
-          includePaths: [__dirname + "/src/js"]
+          extensions: "js",
+          includePaths: [
+            __dirname + "/node_modules",
+            __dirname + "/src/js"
+          ]
         }))
           .on('error', console.log)
         .pipe(babel({
