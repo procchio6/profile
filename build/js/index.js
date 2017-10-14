@@ -1,5 +1,7 @@
 (function () {
-  var navLinks = document.querySelectorAll('nav a');
+  var navLinks = document.querySelectorAll('nav ul a');
+  var navToggle = document.querySelector('.nav__toggle');
+  var navList = document.querySelector('nav ul');
 
   navLinks.forEach(function (navLink) {
     var href = navLink.getAttribute('href');
@@ -11,6 +13,9 @@
 
     navLink.addEventListener('click', function (e) {
       e.preventDefault();
+
+      navList.classList.toggle('nav--open');
+
       $('html, body').animate({
         scrollTop: $(element).offset().top - 42
       }, 500);
@@ -29,6 +34,11 @@
     }
 
     window.addEventListener('scroll', applyActiveClass);
+  });
+
+  navToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    navList.classList.toggle('nav--open');
   });
 })();
 

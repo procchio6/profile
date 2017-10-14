@@ -1,5 +1,7 @@
 (function () {
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('nav ul a');
+  const navToggle = document.querySelector('.nav__toggle');
+  const navList = document.querySelector('nav ul');
 
   navLinks.forEach( navLink => {
     const href = navLink.getAttribute('href');
@@ -11,6 +13,9 @@
 
     navLink.addEventListener('click', (e) => {
       e.preventDefault();
+
+      navList.classList.toggle('nav--open');
+      
       $('html, body').animate({
         scrollTop: $(element).offset().top - 42
       }, 500);
@@ -29,5 +34,11 @@
     }
 
     window.addEventListener('scroll', applyActiveClass);
+  });
+
+
+  navToggle.addEventListener('click', e => {
+    e.preventDefault()
+    navList.classList.toggle('nav--open');
   });
 })()

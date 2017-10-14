@@ -1,0 +1,27 @@
+.skills {
+  background-color: #244865;
+  color: #F7F7F7;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.skill {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #F7F7F7;
+  color: #141412;
+  border: 2px solid #141412;
+  border-radius: 4px;
+}
