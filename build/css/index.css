@@ -4,8 +4,8 @@ nav {
   position: fixed;
   z-index: 9999;
   width: 100%;
-  box-shadow: 0px 2px 5px #244865;
-  background-color: #244865; }
+  background-color: #244865;
+  box-shadow: 0px 2px 5px #244865; }
 
 nav > ul {
   display: flex;
@@ -21,18 +21,21 @@ nav > ul {
 
 @media (max-width: 768px) {
   nav ul {
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
-    display: none; }
+    max-height: 0px;
+    transition: max-height .3s ease-in-out; }
   nav li {
-    text-align: left;
-    width: 100%; }
+    width: 100%;
+    text-align: left; }
   nav a {
     display: block !important; }
   .nav__toggle {
     display: block; }
   .nav--open {
-    display: block; } }
+    display: block;
+    max-height: 1000px; } }
 
 nav a:hover {
   background-color: #31638b; }
